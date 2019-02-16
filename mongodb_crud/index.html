@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HREXT07 R00lz!</title>
+
+  <link rel="stylesheet" type= "text/css" href="css/style.css">
+
+
+</head>
+  <body>
+    <div class = page-container>
+      <div class = tool-bar>
+        <div class = home-button>
+          <p>Home</p>
+        </div>
+        <button class = make-new-shipment>Create New Shipment</button>
+      </div>
+      <form class = new-shipment-form>
+        <h1>New Air Shipment</h2>
+
+        <div class = new-shipment-transport-details>
+
+          <h2>Transport Details</h2>
+          <div class = new-shipment-terms-container>
+            <h3>Shipping Terms</h3>
+            <input class = new-shipment-incoterms placeholder = Incoterms type = text></input>
+          </div>
+          <div class = new-shipment-from-container>
+            <h3>From:</h3>
+            <input class = new-shipment-shipping-port placeholder = City type = text></input>
+            <input class = new-shipment-shipping-port-code placeholder = 'Airport Code'></input>
+          </div>
+          <div class = new-shipment-to-container>
+            <h3>To:</h3>
+            <input class = new-shipment-delivery-port placeholder = City></input>
+            <input class = new-shipment-delivery-port-code placeholder = 'Airport Code'></input>
+          </div>
+        </div>
+
+        <div class = new-shipment-freight-details>
+
+          <h2>Freight Details</h2>
+          <input class = new-shipment-pieces placeholder = "Number of Pieces"></input>
+          <input class = new-shipment-dims-length placeholder = L></input>
+          <input class = new-shipment-dims-width placeholder = W></input>
+          <input class = new-shipment-dims-height placeholder = H></input>
+          <input class = new-shipment-gross-weight placeholder = "Total Weight"></input>
+
+        </div>
+        <div class = new-shipment-product-details>
+
+          <h2>Product Details</h2>
+          <input class = new-shipment-shipper-reference placeholder = "Shipper's Reference"></input>
+          <input class = new-shipment-consignee-reference placeholder = "Consignee's Reference"></input>
+          <input class = new-shipment-product-description placeholder = Description></input>
+          <input class = new-shipment-product-value placeholder = "$USD Value"></input>
+
+        </div>
+
+        <div class = new-shipment-origin-details>
+
+          <h2>Shipper Details</h2>
+          <h3>Exporter's Name</h3>
+          <input class = new-shipment-shipper placeholder = Name></input>
+          <h3>Exporter's Location</h3>
+          <input class = new-shipment-shipper-address placeholder = 'Street & Number'></input>
+          <input class = new-shipment-shipper-zipcode placeholder = 'Postal Code'></input>
+          <input class = new-shipment-shipper-city placeholder = City></input>
+          <input class = new-shipment-shipper-country placeholder = "Country"></input>
+
+        </div>
+
+        <div class = new-shipment-destination-details>
+
+          <h2>Consignee Details</h2>
+          <h3>Importer's Name</h3>
+          <input class = new-shipment-consignee placeholder = Consignee Name></input>
+          <h3>Importer's Address</h3>
+          <input class = new-shipment-consignee-address placeholder = 'Street & Number'></input>
+          <input class = new-shipment-consignee-zipcode placeholder = 'Postal Code'></input>
+          <input class = new-shipment-consignee-city placeholder = 'City'></input>
+          <input class = new-shipment-consignee-country placeholder = "Country"></input>
+
+        </div>
+
+        <button type = submit class = new-shipment-submit-button>Create Shipment</button>
+
+      </form>
+      <form class = edit-shipment-form>
+        <h1>Edit Air Shipment</h2>
+
+        <div class = edit-shipment-transport-details>
+
+          <h2>Transport Details</h2>
+          <div class = edit-shipment-terms-container>
+            <h3>Shipping Terms</h3>
+            <input class = edit-shipment-incoterms placeholder = Incoterms type = text></input>
+          </div>
+          <div class = edit-shipment-from-container>
+            <h3>From:</h3>
+            <input class = edit-shipment-shipping-port placeholder = City type = text></input>
+            <input class = edit-shipment-shipping-port-code placeholder = 'Airport Code'></input>
+          </div>
+          <div class = edit-shipment-to-container>
+            <h3>To:</h3>
+            <input class = edit-shipment-delivery-port placeholder = City></input>
+            <input class = edit-shipment-delivery-port-code placeholder = 'Airport Code'></input>
+          </div>
+        </div>
+
+        <div class = edit-shipment-freight-details>
+
+          <h2>Freight Details</h2>
+          <input class = edit-shipment-pieces placeholder = "Number of Pieces"></input>
+          <input class = edit-shipment-dims-length placeholder = L></input>
+          <input class = edit-shipment-dims-width placeholder = W></input>
+          <input class = edit-shipment-dims-height placeholder = H></input>
+          <input class = edit-shipment-gross-weight placeholder = "Total Weight"></input>
+
+        </div>
+        <div class = edit-shipment-product-details>
+
+          <h2>Product Details</h2>
+          <input class = edit-shipment-shipper-reference placeholder = "Shipper's Reference"></input>
+          <input class = edit-shipment-consignee-reference placeholder = "Consignee's Reference"></input>
+          <input class = edit-shipment-product-description placeholder = Description></input>
+          <input class = edit-shipment-product-value placeholder = "$USD Value"></input>
+
+        </div>
+
+        <div class = edit-shipment-origin-details>
+
+          <h2>Shipper Details</h2>
+          <h3>Exporter's Name</h3>
+          <input class = edit-shipment-shipper placeholder = Name></input>
+          <h3>Exporter's Location</h3>
+          <input class = edit-shipment-shipper-address placeholder = 'Street & Number'></input>
+          <input class = edit-shipment-shipper-zipcode placeholder = 'Postal Code'></input>
+          <input class = edit-shipment-shipper-city placeholder = City></input>
+          <input class = edit-shipment-shipper-country placeholder = "Country"></input>
+
+        </div>
+
+        <div class = edit-shipment-destination-details>
+
+          <h2>Consignee Details</h2>
+          <h3>Importer's Name</h3>
+          <input class = edit-shipment-consignee placeholder = Consignee Name></input>
+          <h3>Importer's Address</h3>
+          <input class = edit-shipment-consignee-address placeholder = 'Street & Number'></input>
+          <input class = edit-shipment-consignee-zipcode placeholder = 'Postal Code'></input>
+          <input class = edit-shipment-consignee-city placeholder = 'City'></input>
+          <input class = edit-shipment-consignee-country placeholder = "Country"></input>
+
+        </div>
+      </form>
+
+      <div class = shipment-view>
+        <div class = view-header>
+          <div class = header-shipment-edit-container>
+            <p class = header-shipment-id>Edit Shipment</p>
+          </div>
+          <div class = header-shipment-delete-container>
+            <p class = header-shipment-id>Delete Shipment</p>
+          </div>
+          <div class = header-shipper-container>
+            <p class = header-shipper>Shipper</p>
+          </div>
+          <div class = header-shipper-reference-container>
+            <p class = header-shipper-reference>Shipper's Reference</p>
+          </div>
+          <div class = header-consignee-container>
+            <p class = header-consignee>Consignee</p>
+          </div>
+          <div class = header-consignee-reference-container>
+            <p class = header-consignee-reference>Consignee's Reference</p>
+          </div>
+          <div class = header-origin-container>
+            <p class = header-origin>Origin</p>
+          </div>
+          <div class = header-destination-container>
+            <p class = header-destination>Destination</p>
+          </div>
+          <div class = header-gross-weight-container>
+            <p class = header-gross-weight>Gross Weight</p>
+          </div>
+          <div class = header-chargeable-weight-container>
+            <p class = header-chargeable-weight>Chargeable Weight</p>
+          </div>
+          <div class = header-product-description-container>
+            <p class = header-product-description> Product Description</p>
+          </div>
+        </div>
+        <div class = shipments>
+          <div class = shipment>
+            <div class = shipment-edit-container>
+              <button class = shipment-edit>Edit</button>
+            </div>
+            <div class = shipment-delete-container>
+              <button class = shipment-delete>Delete</button>
+            </div>
+            <div class = shipper-container>
+              <p class = shipper>Audere</p>
+            </div>
+            <div class = shipper-reference-container>
+              <p class = shipper-reference>Apurate</p>
+            </div>
+            <div class = consignee-container>
+              <p class = consignee>La Alhambra</p>
+            </div>
+            <div class = consignee-reference-container>
+              <p class = consignee-reference>Pinche Guey</p>
+            </div>
+            <div class = origin-container>
+              <p class = origin>Seattle</p>
+            </div>
+            <div class = destination-container>
+              <p class = destination>Granada</p>
+            </div>
+            <div class = gross-weight-container>
+              <p class = gross-weight>95 KGs</p>
+            </div>
+            <div class = chargeable-weight-container>
+              <p class = chargeable-weight>400 KGs</p>
+            </div>
+          <div class = product-description-container>
+            <p class = product-description> Artist Renderings</p>
+          </div>
+        </div>
+        </div>
+        <div class = shipment-details-container>
+          <div class = shipment-details>
+            <div class = shipment-toolbar>
+              <h2 class = shipment-part-header>Overview</h2>
+              <h2 class = shipment-unique-id>Shipment 240045050</h2>
+              <img class = shipment-toolbar-icon id = shipment-overview-button src = https://imgur.com/rq8esoW.png>
+              <img class = shipment-toolbar-icon id = shipment-document-button src = https://imgur.com/kxNl2Vf.png>
+            </div>
+            <div class = shipment-parts>
+              <div class = shipment-overview>
+                <div class = shipment-overview-header>
+                  <img class = shipment-parts-header src = "https://imgur.com/NyBGEzM.png">
+                  <h2>Overview</h2>
+                </div>
+                <div class = shipment-overview-parties>
+                  <div class = overview-shipper-container>
+                    <h3 class = overview-shipper-name>Audere Industries</h3>
+                    <p class = overview-shipper-address>111 S Jackson St</p>
+                    <div class = overview-shipper-location>
+                      <p class = overview-shipper-zipcode>98116</p>
+                      <p class = overview-shipper-city>Seattle</p>
+                      <p class = overview-shipper-state>MN</p>
+                      <p class = overview-shipper-country>USA</p>
+                    </div>
+                  </div>
+                  <h3>To</h3>
+                  <div class = overview-consignee-container>
+                    <h3 class = overview-consignee-name>Audere Industries</h3>
+                    <p class = overview-consignee-address>111 S Jackson St</p>
+                    <div class = overview-consignee-location>
+                      <p class = overview-consignee-zipcode>44524</p>
+                      <p class = overview-consignee-city>Seattle</p>
+                      <p class = overview-consignee-state>WA</p>
+                      <p class = overview-consignee-country>USA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class = shipment-overview-freight-product>
+                  <h3>Product and Freight Details</h3>
+                  <p class = shipment-overview-pieces>11 pieces</p>
+                  <p class = shipment-overview-dims>12x13x44 Inches</p>
+                  <p class = shipment-overview-gross-weight>95 KGS</p>
+                  <p class = shipment-overview-chargeableweight>400 KGS</p>
+                  <p class = shipment-overview-product-description>Artist Renderings</p>
+                </div>
+                <div class = shipment-overview-locations>
+                  <h3>Origin and Destination</h3>
+                  <p class = shipment-overview-origin>Seattle</p>
+                  <p class = shipment-overview-origin-port>SEA</p>
+                  <p class = shipment-overview-destination>Granada</p>
+                  <p class = shipment-overview-destination-port>GRX</p>
+                </div>
+                <div class = shipment-overview-references>
+                  <h3>Shipment References</h3>
+                  <p class = shipment-overview-shipper-reference>124442</p>
+                  <p class = shipment-overview-consignee-reference>43459</p>
+                  <p class = shipment-overview-shipment-unique-id>42244242</p>
+                  <p class = shipment-overview-mawb-number>999 9999 9999</p>
+                </div>
+              <div class = shipment-documents>
+                <div class = document-selector-toolbar>
+                  <h2 class = document-selector-toolbar-BOL>Bill of Lading</h2>
+                  <h2 class = document-selector-toolbar-AWB>Air WayBill</h2>
+                  <h2 class = document-selector-toolbar-DO>Delivery Order</h2>
+                </div>
+                <div class = shipment-document-selector>
+                </div>
+              </div>
+              <div class = shipment-messages>
+              </div>
+            </div>
+            <div class = shipment-sidebar>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script
+          src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(()=>{
+      const shipments = $('.shipments');
+      const newShipmentForm = $('.new-shipment-form');
+
+      const shipmentTerms = $('.new-shipment-incoterms');
+      const shipmentOrigin = $('.new-shipment-shipping-port');
+      const shipmentOriginPort = $('.new-shipment-shipping-port-code');
+      const shipmentDestination = $('.new-shipment-delivery-port');
+      const shipmentDestinationPort = $('.new-shipment-delivery-port-code');
+
+      const shipmentPieceCount = $('.new-shipment-pieces');
+      const shipmentPieceLength = $('.new-shipment-dims-length');
+      const shipmentPieceWidth = $('.new-shipment-dims-width');
+      const shipmentPieceHeight = $('.new-shipment-dims-height');
+      const shipmentGrossWeight = $('.new-shipment-gross-weight');
+
+      const shipmentShipperReference = $('.new-shipment-shipper-reference');
+      const shipmentConsigneeReference = $('.new-shipment-consignee-reference');
+      const shipmentProductDescription = $('.new-shipment-product-description');
+      const shipmentProductValue = $('.new-shipment-product-value');
+
+      const shipmentShipper = $('.new-shipment-shipper');
+      const shipmentShipperStreet = $('.new-shipment-shipper-address');
+      const shipmentShipperPostCode = $('.new-shipment-shipper-zipcode');
+      const shipmentShipperCity = $('.new-shipment-shipper-city');
+      const shipmentShipperCountry = $('.new-shipment-shipper-country');
+
+      const shipmentConsignee = $('.new-shipment-consignee');
+      const shipmentConsigneeStreet = $('.new-shipment-consignee-address');
+      const shipmentConsigneePostCode = $('.new-shipment-consignee-zipcode');
+      const shipmentConsigneeCity = $('.new-shipment-consignee-city');
+      const shipmentConsigneeCountry = $('.new-shipment-consignee-country');
+
+      const editShipmentForm = $('.edit-shipment-form');
+
+      const editTerms = $('.edit-shipment-incoterms');
+      const editOrigin = $('.edit-shipment-shipping-port');
+      const editOriginPort = $('.edit-shipment-shipping-port-code');
+      const editDestination = $('.edit-shipment-delivery-port');
+      const editDestinationPort = $('.new-shipment-delivery-port-code');
+
+      const editPieceCount = $('.edit-shipment-pieces');
+      const editPieceLength = $('.edit-shipment-dims-length');
+      const editPieceWidth = $('.edit-shipment-dims-width');
+      const editPieceHeight = $('.edit-shipment-dims-height');
+      const editGrossWeight = $('.edit-shipment-gross-weight');
+
+      const editShipperReference = $('.edit-shipment-shipper-reference');
+      const editConsigneeReference = $('.edit-shipment-consignee-reference');
+      const editProductDescription = $('.edit-shipment-product-description');
+      const editProductValue = $('.edit-shipment-product-value');
+
+      const editShipper = $('.edit-shipment-shipper');
+      const editShipperStreet = $('.edit-shipment-shipper-address');
+      const editShipperPostCode = $('.edit-shipment-shipper-zipcode');
+      const editShipperCity = $('.edit-shipment-shipper-city');
+      const editShipperCountry = $('.edit-shipment-shipper-country');
+
+      const editConsignee = $('.edit-shipment-consignee');
+      const editConsigneeStreet = $('.edit-shipment-consignee-address');
+      const editConsigneePostCode = $('.edit-shipment-consignee-zipcode');
+      const editConsigneeCity = $('.edit-shipment-consignee-city');
+      const editConsigneeCountry = $('.edit-shipment-consignee-country');
+
+      const newShipmentFormFields = [ shipmentTerms, shipmentOrigin, shipmentOriginPort, shipmentDestination, shipmentDestinationPort, shipmentPieceCount, shipmentPieceLength, shipmentPieceWidth, shipmentPieceHeight, shipmentGrossWeight, shipmentShipperReference, shipmentConsigneeReference, shipmentProductDescription, shipmentProductValue, shipmentShipper, shipmentShipperStreet, shipmentShipperPostCode, shipmentShipperCity, shipmentShipperCountry, shipmentConsignee, shipmentConsigneeStreet, shipmentConsigneePostCode, shipmentConsigneeCity, shipmentConsigneeCountry ];
+
+
+      $(document).on('click','.make-new-shipment',function(){
+        newShipmentForm.css('display','flex');
+      });
+
+      $(document).on('click', '.shipment-edit', function(){
+        $('.shipment-edit').css('display','none');
+        editShipmentForm.css('display','flex');
+        $('.shipment-update').css('display','inline-block')
+      });
+
+      const getShipments = () =>{
+        fetch('/getTodos', {method : "get"}).then((response)=>{
+          return response.json();
+        }).then((data)=>{
+          console.log(data);
+          displayShipments(data);
+        });
+      }
+
+      getShipments();
+
+      const resetShipmentForm = () =>{
+        newShipmentFormFields.forEach((field)=>{
+          field.val('');
+        });
+      }
+
+      const readyEditForm = (shipment) =>{
+        console.log('activated');
+        editShipmentForm.css('display','flex');
+        editTerms.val(shipment.incoterms);
+        editOrigin.val(shipment.origin);
+        editOriginPort.val(shipment.originPort);
+        editDestination.val(shipment.destination);
+        editDestinationPort.val(shipment.destinationPort);
+
+        editPieceCount.val(shipment.pieceCount);
+        editPieceLength.val(shipment.pieceLength);
+        editPieceWidth.val(shipment.pieceWidth);
+        editPieceHeight.val(shipment.pieceHeight);
+        editGrossWeight.val(shipment.grossWeight);
+
+        editShipperReference.val(shipment.shipperReference);
+        editConsigneeReference.val(shipment.consigneeReference);
+        editProductDescription.val(shipment.productDescription);
+        editProductValue.val(shipment.productDescription);
+
+        editShipper.val(shipment.shipper);
+        editShipperStreet.val(shipment.shipperStreet);
+        editShipperPostCode.val(shipment.shipperPostCode);
+        editShipperCity.val(shipment.shipperCity);
+        editShipperCountry.val(shipment.shipperCountry);
+
+        editConsignee.val(shipment.consignee);
+        editConsigneeStreet.val(shipment.consigneeStreet);
+        editConsigneePostCode.val(shipment.consigneePostCode);
+        editConsigneeCity.val(shipment.consigneeCity);
+        editConsigneeCountry.val(shipment.consigneeCountry);
+      }
+
+      const openEditOptions = (shipment, editID) =>{
+        let editBtn = $(`#${editID}`);
+        editBtn.click(()=>{
+          console.log(activated);
+          fetch(`/${todo._id}`,{method: "get"}).then((response)=>{
+            return response.json();
+          }).then((data)=>{
+            console.log(data);
+            readyEditForm(shipment);
+          });
+        });
+      }
+
+      const updateShipment = (shipment, divShipmentID, updateID) =>{
+        let updateBtn = $(`#${updateID}`);
+        updateBtn.click(()=>{
+          fetch(`/${shipment._id}`,{
+            method: "put",
+            headers : {
+              "Content-Type" : "application/json; charset = utf-8"
+            },
+            body : JSON.stringify( {shipper : editShipper.val(),
+             shipperStreet : editShipperStreet.val(),
+             shipperPostCode: editShipperPostCode.val(),
+             shipperCity: editShipperCountry.val(),
+             shipperCountry: editShipperCountry.val(),
+             consignee : editConsignee.val(),
+             consigneeStreet : editConsigneeStreet.val(),
+             consigneePostCode : editConsigneePostCode.val(),
+             consigneeCity : shipmentConsigneeCity.val(),
+             consigneeCountry : shipmentConsigneeCountry.val(),
+             incoterms : shipmentTerms.val(),
+             origin : shipmentOrigin.val(),
+             originPort : shipmentOriginPort.val(),
+             destination : shipmentDestination.val(),
+             destinationPort : shipmentDestinationPort.val(),
+             pieceCount : shipmentPieceCount.val(),
+             pieceLength : shipmentPieceLength.val(),
+             pieceWidth : shipmentPieceWidth.val(),
+             pieceHeight : shipmentPieceHeight.val(),
+             grossWeight : shipmentGrossWeight.val(),
+             chargeableWeight : 400,
+             shipperReference : shipmentShipperReference.val(),
+             consigneeReference : shipmentConsigneeReference.val(),
+             productDescription : shipmentProductDescription.val(),
+             productValue : shipmentProductValue.val(),
+          }),
+          }).then((response)=>{
+            return response.json();
+          }).then((data)=>{
+              if(data.ok == 1){
+              }
+          });
+        });
+      }
+    //     let updateBtn = $(`#${updateID}`);
+    //     updateBtn.click( () => {
+    //         fetch(`/${shipment._id}`,{
+    //         method : "put",
+    //         headers : {
+    //           "Content-Type" : "application/json; charset = utf-8"
+    //         },
+    //         body : JSON.stringify( {shipper : editShipper.val(),
+    //          shipperStreet : shipmentShipperStreet.val(),
+    //          shipperPostCode: shipmentShipperPostCode.val(),
+    //          shipperCity: shipmentShipperCountry.val(),
+    //          shipperCountry: shipmentShipperCountry.val(),
+    //          consignee : shipmentConsignee.val(),
+    //          consigneeStreet : shipmentConsigneeStreet.val(),
+    //          consigneePostCode : shipmentConsigneePostCode.val(),
+    //          consigneeCity : shipmentConsigneeCity.val(),
+    //          consigneeCountry : shipmentConsigneeCountry.val(),
+    //          incoterms : shipmentTerms.val(),
+    //          origin : shipmentOrigin.val(),
+    //          originPort : shipmentOriginPort.val(),
+    //          destination : shipmentDestination.val(),
+    //          destinationPort : shipmentDestinationPort.val(),
+    //          pieceCount : shipmentPieceCount.val(),
+    //          pieceLength : shipmentPieceLength.val(),
+    //          pieceWidth : shipmentPieceWidth.val(),
+    //          pieceHeight : shipmentPieceHeight.val(),
+    //          grossWeight : shipmentGrossWeight.val(),
+    //          chargeableWeight : 400,
+    //          shipperReference : shipmentShipperReference.val(),
+    //          consigneeReference : shipmentConsigneeReference.val(),
+    //          productDescription : shipmentProductDescription.val(),
+    //          productValue : shipmentProductValue.val(),
+    //       }),
+    //       }).then((response)=>{
+    //           return response.json();
+    //       }).then((data)=>{
+    //           if(data.ok == 1){
+    //             let todoIndex = $(`#${todoID}`);
+    //             todoIndex.html(data.value.todo);
+    //             resetShipmentForm();
+    //           }
+    //       });
+    //   });
+    // }
+  /*
+          // editShipmentForm.css('display','flex');
+
+
+}
+
+
+
+
+
+
+*/
+      const deleteShipment = (shipment, divShipmentID, deleteID) =>{
+        let deleteBtn = $(`#${deleteID}`);
+        deleteBtn.click(()=>{
+          fetch(`/${shipment._id}`,{
+            method: "delete"
+          }).then((response)=>{
+            return response.json();
+          }).then((data)=>{
+              if(data.ok == 1){
+                $(`#${divShipmentID}`).remove();
+              }
+          });
+        });
+      }
+
+      const buildIDS = (shipment) =>{
+        return {
+          editID : "edit_" + shipment._id,
+          updateID : "update_" + shipment._id,
+          deleteID : "delete_" + shipment._id,
+          divShipmentID : "divShipment_" + shipment._id,
+          shipmentID : 'shipment_' + shipment._id,
+          shipperID : "shipper_" + shipment._id,
+          shipperReferenceID : "shipperReference_" + shipment._id,
+          consigneeID : "consignee_" + shipment._id,
+          consigneeReferenceID : "consigneeReference_" + shipment._id,
+          originID : "origin_" + shipment._id,
+          destinationID : "destination_" + shipment._id,
+          grossWeightID : "grossWeight_" + shipment._id,
+          chargeableWeightID: "chargeableWeight_" + shipment._id,
+          productDescriptionID: "productDescription_" + shipment._id,
+        }
+      }
+
+      const buildTemplate = (shipment,ids) =>{
+        return `<div class = shipment id = "${ids.divShipmentID}">
+          <div class = shipment-edit-container >
+            <button class = shipment-edit id = '${ids.editID}' type = button>Edit</button>
+            <button class = shipment-update id = "${ids.updateID}" type = button>Update</button>
+          </div>
+          <div class = shipment-delete-container>
+            <button type = button class = shipment-delete id = '${ids.deleteID}'>Delete</button>
+          </div>
+          <div class = shipper-container>
+            <p class = shipper id= "${ids.shipperID}">${shipment.shipper}</p>
+          </div>
+          <div class = shipper-reference-container>
+            <p class = shipper-reference id ="${ids.shipperReferenceID}">${shipment.shipperReference}</p>
+          </div>
+          <div class = consignee-container>
+            <p class = consignee id = "${ids.consigneeID}">${shipment.consignee}</p>
+          </div>
+          <div class = consignee-reference-container>
+            <p class = consignee-reference id = "${ids.consigneeReferenceID}">${shipment.consigneeReference}</p>
+          </div>
+          <div class = origin-container>
+            <p class = origin id = "${ids.originID}">${shipment.origin}</p>
+          </div>
+          <div class = destination-container>
+            <p class = destination id = "${ids.destinationID}">${shipment.destination}</p>
+          </div>
+          <div class = gross-weight-container>
+            <p class = gross-weight id = "${ids.grossWeightID}">${shipment.grossWeight}</p>
+          </div>
+          <div class = chargeable-weight-container>
+            <p class = chargeable-weight id = "${ids.chargeableWeightID}">${shipment.chargeableWeight}</p>
+          </div>
+          <div class = product-description-container>
+            <p class = product-description id = "${ids.productDescriptionID}">${shipment.productDescription}</p>
+          </div>
+        </div>`
+      }
+
+      const displayShipments = (data) => {
+        data.forEach((shipment) =>{
+          let ids = buildIDS(shipment);
+          shipments.append(buildTemplate(shipment,ids));
+          // editShipment(shipment,ids.shipmentID,ids.editID);
+          deleteShipment(shipment,ids.shipmentID,ids.deleteID);
+        });
+      }
+
+      newShipmentForm.submit((e) =>{
+        e.preventDefault();
+        fetch('/',{
+          method : 'POST',
+          body : JSON.stringify( {shipper : shipmentShipper.val(),
+             shipperStreet : shipmentShipperStreet.val(),
+             shipperPostCode: shipmentShipperPostCode.val(),
+             shipperCity: shipmentShipperCountry.val(),
+             shipperCountry: shipmentShipperCountry.val(),
+             consignee : shipmentConsignee.val(),
+             consigneeStreet : shipmentConsigneeStreet.val(),
+             consigneePostCode : shipmentConsigneePostCode.val(),
+             consigneeCity : shipmentConsigneeCity.val(),
+             consigneeCountry : shipmentConsigneeCountry.val(),
+             incoterms : shipmentTerms.val(),
+             origin : shipmentOrigin.val(),
+             originPort : shipmentOriginPort.val(),
+             destination : shipmentDestination.val(),
+             destinationPort : shipmentDestinationPort.val(),
+             pieceCount : shipmentPieceCount.val(),
+             pieceLength : shipmentPieceLength.val(),
+             pieceWidth : shipmentPieceWidth.val(),
+             pieceHeight : shipmentPieceHeight.val(),
+             grossWeight : shipmentGrossWeight.val(),
+             chargeableWeight : 400,
+             shipperReference : shipmentShipperReference.val(),
+             consigneeReference : shipmentConsigneeReference.val(),
+             productDescription : shipmentProductDescription.val(),
+             productValue : shipmentProductValue.val(),
+          }),
+          headers : {
+            "Content-Type" : "application/json; charset=utf-8"
+          }
+        }).then((response)=>{
+          return response.json();
+        }).then((data)=>{
+          if(data.result.ok == 1 && data.result.n == 1){
+            let ids = buildIDS(data.document);
+            shipments.append(buildTemplate(data.document,ids));
+            // editShipment(data.document,ids.shipmentID,ids.editID);
+            // deleteShipment(data.document,ids.shipmentID,ids.deleteID);
+          }
+          resetShipmentForm();
+          newShipmentForm.css('display','none');
+          });
+      });
+
+
+    });
+
+
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

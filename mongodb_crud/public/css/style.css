@@ -1,0 +1,336 @@
+
+body{
+  margin: 0;
+}
+
+.page-container {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+}
+
+h1,h2,h3{
+  color: dodgerblue;
+}
+input::placeholder{
+  text-align: center;
+  color:rgba(30, 144, 255,.8);
+  opacity: 80%;
+}
+form.new-shipment-form {
+    display: none;
+    background: white;
+    flex-wrap: wrap;
+    width: 60%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,.4);
+    box-shadow: 2px 2px 2px dodgerblue, -2px 2px 2px dodgerblue;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+}
+
+form.edit-shipment-form {
+    display: none;
+    background: white;
+    flex-wrap: wrap;
+    width: 60%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,.4);
+    box-shadow: 2px 2px 2px dodgerblue, -2px 2px 2px dodgerblue;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+}
+
+form h1,h2,h3{
+  width: 100%;
+  margin: 5px 0 2px 0;
+}
+form h2{
+  font-size: 18px;
+}
+form h3{
+  font-size: 14px;
+  color: black;
+}
+
+form > div{
+  margin: auto auto 10px auto;
+}
+
+.new-shipment-origin-details, .new-shipment-destination-details, .edit-shipment-origin-details, .edit-shipment-destination-details{
+    width: 360px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input.new-shipment-shipper, input.new-shipment-consignee, input.new-shipment-shipper-address, input.new-shipment-consignee-address, input.edit-shipment-shipper, input.edit-shipment-consignee, input.edit-shipment-shipper-address, input.edit-shipment-consignee-address{
+    margin: auto 15% 5px 15%;
+    width: 70%;
+}
+
+input.new-shipment-shipper-zipcode, input.new-shipment-shipper-city, input.new-shipment-shipper-country,input.new-shipment-consignee-zipcode, input.new-shipment-consignee-city, input.new-shipment-consignee-country, input.edit-shipment-shipper-zipcode, input.edit-shipment-shipper-city, input.edit-shipment-shipper-country,input.edit-shipment-consignee-zipcode, input.edit-shipment-consignee-city, input.edit-shipment-consignee-country {
+    margin: 0 2.5% auto 1%;
+    width: 26.5%;
+}
+
+.new-shipment-product-details, .new-shipment-freight-details{
+  width: 700px;
+}
+
+input.new-shipment-dims-length, input.new-shipment-dims-width, input.new-shipment-dims-height, input.edit-shipment-dims-length, input.edit-shipment-dims-width, input.edit-shipment-dims-height{
+  width: 6%;
+}
+
+.new-shipment-transport-details,.edit-shipment-transport-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.new-shipment-transport-details > div, .edit-shipment-transport-details > div {
+  width: 32%;
+  margin: auto;
+}
+input.new-shipment-shipping-port,input.new-shipment-delivery-port, input.edit-shipment-shipping-port-code, input.edit-shipment-delivery-port-code {
+  width: 50%;
+}
+input.new-shipment-shipping-port-code, input.new-shipment-delivery-port-code, input.edit-shipment-shipping-port-code, input.edit-shipment-delivery-port-code{
+  width: 35%;
+}
+
+.new-shipment-submit-button{
+  margin: auto;
+  width: 20%;
+}
+
+.tool-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 6.5vh;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 2px 0px 10px dodgerblue;
+}
+
+button.make-new-shipment {
+    width: 200px;
+    height: 28px;
+    margin-right: 2%;
+    background-color: white;
+    color: dodgerblue;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px dodgerblue;
+    border: 1px solid dodgerblue;
+}
+
+.home-button {
+    margin-left: 2%;
+    width: 100px;
+    height: 28px;
+    background-color: white;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    box-shadow: 0px 2px 8px dodgerblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-button p{
+    margin: 0;
+    font-size: 18px;
+}
+.shipment-view {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    height: 93.5vh;
+}
+
+.view-header, .shipment{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.view-header > div{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid dodgerblue;
+  border-bottom: 1px solid dodgerblue;
+  height: 40px;
+}
+.shipments{
+  width: 100%;
+  overflow-y: scroll;
+}
+.shipment {
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    width: 100%;
+}
+
+
+.header-shipper-container, .header-consignee-container,.header-product-description-container, .shipper-container, .consignee-container,.product-description-container {
+    width: 13%;
+}
+.header-shipment-edit-container, .header-shipment-delete-container, .shipment-edit-container, .shipment-delete-container{
+  width: 8%
+}
+.header-shipper-reference-container,.header-consignee-reference-container,.header-origin-container,.header-destination-container, .header-gross-weight-container, .header-chargeable-weight-container, .shipper-reference-container,.consignee-reference-container,.origin-container,.destination-container, .gross-weight-container, .chargeable-weight-container{
+    width: 7%;
+}
+
+.shipment-details-container{
+  width: 100%;
+  min-height: 25%;
+  flex-grow: 1;
+  background: linear-gradient(white,rgba(255,255,255,.8), rgba(255,255,255,.5),rgba(255,255,255,.8), white), url(https://imgur.com/0I23keF.png) no-repeat center center;
+  background-size: contain;
+}
+.shipment-details{
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-wrap: wrap;
+}
+.shipment-toolbar{
+  width: 100%;
+  height: 60px;
+  display:flex;
+  justify-content: flex-start;
+  background: rgba(0,0,0,.8);
+}
+.shipment-toolbar h2{
+  font-size: 24px;
+  color: white;
+  width: 20%;
+  margin: auto 10px auto 10px;
+}
+
+img.shipment-toolbar-icon{
+  height: 55px;
+  width: auto;
+  margin: auto 10px auto 10px;
+}
+
+.shipment-parts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 580px;
+}
+
+.shipment-sidebar {
+    background: rgba(0,0,0,.8);
+    width: 4.9%;
+    height: 100%;
+    margin: 0;
+}
+.shipment-overview {
+    display: block;
+    height: auto;
+    width: auto;
+    margin: 10px auto 10px auto;
+    background-color: rgba(255,255,255,.4);
+}
+.shipment-overview-parties {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px auto auto auto;
+    width: 600px
+}
+.shipment-overview-parties h3{
+    margin: auto;
+}
+.overview-shipper-container, .overview-consignee-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: left;
+    width: 400px;
+}
+p.overview-shipper-address, p.overview-consignee-address{
+  margin: 0;
+}
+.overview-shipper-location, .overview-consignee-location{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto auto 0;
+}
+
+.overview-shipper-location > p, .overview-consignee-location > p{
+  margin: 0 3px auto 0;
+  font-size: 16px;
+}
+
+.shipment-overview-freight-product, .shipment-overview-locations, .shipment-overview-references {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    width: 600px;
+}
+
+.shipment-overview-freight-product > p,.shipment-overview-locations >p, .shipment-overview-references >p{
+    display: flex;
+    margin: auto;
+}
+
+
+.shipment-overview-header {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+}
+
+img.shipment-parts-header {
+    height: 40px;
+    width: auto;
+}
+.shipment-overview-header > h2{
+    margin: auto 10px auto 10px;
+    width: auto;
+}
+.shipment-documents {
+    display: none;
+    flex-wrap: wrap;
+    width: 1300px;
+    height: auto;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.shipment-update{
+  display: none;
+}
