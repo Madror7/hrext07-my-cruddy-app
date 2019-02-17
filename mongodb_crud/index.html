@@ -13,10 +13,12 @@
   <body>
     <div class = page-container>
       <div class = tool-bar>
-        <div class = home-button>
-          <p>Home</p>
-        </div>
-        <button class = make-new-shipment>Create New Shipment</button>
+        <button class = home-button>
+          <img class = home-button-image src = 'https://imgur.com/dZdlUfp.png'>
+        </button>
+        <button class = make-new-shipment>
+          <img class = make-new-shipment-image src = 'https://imgur.com/H5KaxhZ.png'>
+        </button>
       </div>
       <form class = new-shipment-form>
         <h1>New Air Shipment</h2>
@@ -31,32 +33,32 @@
           <div class = new-shipment-from-container>
             <h3>From:</h3>
             <input class = new-shipment-shipping-port placeholder = City type = text></input>
-            <input class = new-shipment-shipping-port-code placeholder = 'Airport Code'></input>
+            <input class = new-shipment-shipping-port-code placeholder = 'Airport Code' type = text></input>
           </div>
           <div class = new-shipment-to-container>
             <h3>To:</h3>
-            <input class = new-shipment-delivery-port placeholder = City></input>
-            <input class = new-shipment-delivery-port-code placeholder = 'Airport Code'></input>
+            <input class = new-shipment-delivery-port placeholder = City type = text></input>
+            <input class = new-shipment-delivery-port-code placeholder = 'Airport Code' type = text></input>
           </div>
         </div>
 
         <div class = new-shipment-freight-details>
 
           <h2>Freight Details</h2>
-          <input class = new-shipment-pieces placeholder = "Number of Pieces"></input>
-          <input class = new-shipment-dims-length placeholder = L></input>
-          <input class = new-shipment-dims-width placeholder = W></input>
-          <input class = new-shipment-dims-height placeholder = H></input>
-          <input class = new-shipment-gross-weight placeholder = "Total Weight"></input>
+          <input class = new-shipment-pieces placeholder = "Number of Pieces" type = number></input>
+          <input class = new-shipment-dims-length placeholder = L type = number></input>
+          <input class = new-shipment-dims-width placeholder = W type = number></input>
+          <input class = new-shipment-dims-height placeholder = H type = number></input>
+          <input class = new-shipment-gross-weight placeholder = "Total Weight" type = number></input>
 
         </div>
         <div class = new-shipment-product-details>
 
           <h2>Product Details</h2>
-          <input class = new-shipment-shipper-reference placeholder = "Shipper's Reference"></input>
-          <input class = new-shipment-consignee-reference placeholder = "Consignee's Reference"></input>
-          <input class = new-shipment-product-description placeholder = Description></input>
-          <input class = new-shipment-product-value placeholder = "$USD Value"></input>
+          <input class = new-shipment-shipper-reference placeholder = "Shipper's Reference" type = text></input>
+          <input class = new-shipment-consignee-reference placeholder = "Consignee's Reference" type = text></input>
+          <input class = new-shipment-product-description placeholder = Description type = text></input>
+          <input class = new-shipment-product-value placeholder = "$USD Value" type = number></input>
 
         </div>
 
@@ -64,12 +66,12 @@
 
           <h2>Shipper Details</h2>
           <h3>Exporter's Name</h3>
-          <input class = new-shipment-shipper placeholder = Name></input>
+          <input class = new-shipment-shipper placeholder = Name type = text></input>
           <h3>Exporter's Location</h3>
-          <input class = new-shipment-shipper-address placeholder = 'Street & Number'></input>
-          <input class = new-shipment-shipper-zipcode placeholder = 'Postal Code'></input>
-          <input class = new-shipment-shipper-city placeholder = City></input>
-          <input class = new-shipment-shipper-country placeholder = "Country"></input>
+          <input class = new-shipment-shipper-address placeholder = 'Street & Number' type = text></input>
+          <input class = new-shipment-shipper-zipcode placeholder = 'Postal Code' type = text></input>
+          <input class = new-shipment-shipper-city placeholder = City type = text></input>
+          <input class = new-shipment-shipper-country placeholder = "Country" type = text></input>
 
         </div>
 
@@ -77,12 +79,12 @@
 
           <h2>Consignee Details</h2>
           <h3>Importer's Name</h3>
-          <input class = new-shipment-consignee placeholder = Consignee Name></input>
+          <input class = new-shipment-consignee placeholder = "Consignee Name" type = text></input>
           <h3>Importer's Address</h3>
-          <input class = new-shipment-consignee-address placeholder = 'Street & Number'></input>
-          <input class = new-shipment-consignee-zipcode placeholder = 'Postal Code'></input>
-          <input class = new-shipment-consignee-city placeholder = 'City'></input>
-          <input class = new-shipment-consignee-country placeholder = "Country"></input>
+          <input class = new-shipment-consignee-address placeholder = 'Street & Number' type = text></input>
+          <input class = new-shipment-consignee-zipcode placeholder = 'Postal Code' type = text></input>
+          <input class = new-shipment-consignee-city placeholder = 'City' type = text></input>
+          <input class = new-shipment-consignee-country placeholder = "Country" type = text></input>
 
         </div>
 
@@ -102,32 +104,32 @@
           <div class = edit-shipment-from-container>
             <h3>From:</h3>
             <input class = edit-shipment-shipping-port placeholder = City type = text></input>
-            <input class = edit-shipment-shipping-port-code placeholder = 'Airport Code'></input>
+            <input class = edit-shipment-shipping-port-code placeholder = 'Airport Code' type = text></input>
           </div>
           <div class = edit-shipment-to-container>
             <h3>To:</h3>
-            <input class = edit-shipment-delivery-port placeholder = City></input>
-            <input class = edit-shipment-delivery-port-code placeholder = 'Airport Code'></input>
+            <input class = edit-shipment-delivery-port placeholder = City type = text></input>
+            <input class = edit-shipment-delivery-port-code placeholder = 'Airport Code' type = text></input>
           </div>
         </div>
 
         <div class = edit-shipment-freight-details>
 
           <h2>Freight Details</h2>
-          <input class = edit-shipment-pieces placeholder = "Number of Pieces"></input>
-          <input class = edit-shipment-dims-length placeholder = L></input>
-          <input class = edit-shipment-dims-width placeholder = W></input>
-          <input class = edit-shipment-dims-height placeholder = H></input>
-          <input class = edit-shipment-gross-weight placeholder = "Total Weight"></input>
+          <input class = edit-shipment-pieces placeholder = "Number of Pieces" type = number></input>
+          <input class = edit-shipment-dims-length placeholder = L type = number></input>
+          <input class = edit-shipment-dims-width placeholder = W type = number></input>
+          <input class = edit-shipment-dims-height placeholder = H type = number></input>
+          <input class = edit-shipment-gross-weight placeholder = "Total Weight" type = number></input>
 
         </div>
         <div class = edit-shipment-product-details>
 
           <h2>Product Details</h2>
-          <input class = edit-shipment-shipper-reference placeholder = "Shipper's Reference"></input>
-          <input class = edit-shipment-consignee-reference placeholder = "Consignee's Reference"></input>
-          <input class = edit-shipment-product-description placeholder = Description></input>
-          <input class = edit-shipment-product-value placeholder = "$USD Value"></input>
+          <input class = edit-shipment-shipper-reference placeholder = "Shipper's Reference" type = text></input>
+          <input class = edit-shipment-consignee-reference placeholder = "Consignee's Reference" type = text></input>
+          <input class = edit-shipment-product-description placeholder = Description type = text></input>
+          <input class = edit-shipment-product-value placeholder = "$USD Value" type = number></input>
 
         </div>
 
@@ -135,12 +137,12 @@
 
           <h2>Shipper Details</h2>
           <h3>Exporter's Name</h3>
-          <input class = edit-shipment-shipper placeholder = Name></input>
+          <input class = edit-shipment-shipper placeholder = Name type = text></input>
           <h3>Exporter's Location</h3>
-          <input class = edit-shipment-shipper-address placeholder = 'Street & Number'></input>
-          <input class = edit-shipment-shipper-zipcode placeholder = 'Postal Code'></input>
-          <input class = edit-shipment-shipper-city placeholder = City></input>
-          <input class = edit-shipment-shipper-country placeholder = "Country"></input>
+          <input class = edit-shipment-shipper-address placeholder = 'Street & Number' type = text></input>
+          <input class = edit-shipment-shipper-zipcode placeholder = 'Postal Code' type = text></input>
+          <input class = edit-shipment-shipper-city placeholder = City type = text></input>
+          <input class = edit-shipment-shipper-country placeholder = "Country" type = text></input>
 
         </div>
 
@@ -148,24 +150,18 @@
 
           <h2>Consignee Details</h2>
           <h3>Importer's Name</h3>
-          <input class = edit-shipment-consignee placeholder = Consignee Name></input>
+          <input class = edit-shipment-consignee placeholder = "Consignee Name" type = text></input>
           <h3>Importer's Address</h3>
-          <input class = edit-shipment-consignee-address placeholder = 'Street & Number'></input>
-          <input class = edit-shipment-consignee-zipcode placeholder = 'Postal Code'></input>
-          <input class = edit-shipment-consignee-city placeholder = 'City'></input>
-          <input class = edit-shipment-consignee-country placeholder = "Country"></input>
+          <input class = edit-shipment-consignee-address placeholder = 'Street & Number' type = text></input>
+          <input class = edit-shipment-consignee-zipcode placeholder = 'Postal Code' type = text></input>
+          <input class = edit-shipment-consignee-city placeholder = 'City' type = text></input>
+          <input class = edit-shipment-consignee-country placeholder = "Country" type = text></input>
 
         </div>
       </form>
 
       <div class = shipment-view>
         <div class = view-header>
-          <div class = header-shipment-edit-container>
-            <p class = header-shipment-id>Edit Shipment</p>
-          </div>
-          <div class = header-shipment-delete-container>
-            <p class = header-shipment-id>Delete Shipment</p>
-          </div>
           <div class = header-shipper-container>
             <p class = header-shipper>Shipper</p>
           </div>
@@ -193,43 +189,10 @@
           <div class = header-product-description-container>
             <p class = header-product-description> Product Description</p>
           </div>
-        </div>
-        <div class = shipments>
-          <div class = shipment>
-            <div class = shipment-edit-container>
-              <button class = shipment-edit>Edit</button>
-            </div>
-            <div class = shipment-delete-container>
-              <button class = shipment-delete>Delete</button>
-            </div>
-            <div class = shipper-container>
-              <p class = shipper>Audere</p>
-            </div>
-            <div class = shipper-reference-container>
-              <p class = shipper-reference>Apurate</p>
-            </div>
-            <div class = consignee-container>
-              <p class = consignee>La Alhambra</p>
-            </div>
-            <div class = consignee-reference-container>
-              <p class = consignee-reference>Pinche Guey</p>
-            </div>
-            <div class = origin-container>
-              <p class = origin>Seattle</p>
-            </div>
-            <div class = destination-container>
-              <p class = destination>Granada</p>
-            </div>
-            <div class = gross-weight-container>
-              <p class = gross-weight>95 KGs</p>
-            </div>
-            <div class = chargeable-weight-container>
-              <p class = chargeable-weight>400 KGs</p>
-            </div>
-          <div class = product-description-container>
-            <p class = product-description> Artist Renderings</p>
+          <div class = header-shipment-actions-container>
           </div>
         </div>
+        <div class = shipments>
         </div>
         <div class = shipment-details-container>
           <div class = shipment-details>
@@ -354,7 +317,7 @@
       const editOrigin = $('.edit-shipment-shipping-port');
       const editOriginPort = $('.edit-shipment-shipping-port-code');
       const editDestination = $('.edit-shipment-delivery-port');
-      const editDestinationPort = $('.new-shipment-delivery-port-code');
+      const editDestinationPort = $('.edit-shipment-delivery-port-code');
 
       const editPieceCount = $('.edit-shipment-pieces');
       const editPieceLength = $('.edit-shipment-dims-length');
@@ -386,11 +349,6 @@
         newShipmentForm.css('display','flex');
       });
 
-      $(document).on('click', '.shipment-edit', function(){
-        $('.shipment-edit').css('display','none');
-        editShipmentForm.css('display','flex');
-        $('.shipment-update').css('display','inline-block')
-      });
 
       const getShipments = () =>{
         fetch('/getTodos', {method : "get"}).then((response)=>{
@@ -410,7 +368,6 @@
       }
 
       const readyEditForm = (shipment) =>{
-        console.log('activated');
         editShipmentForm.css('display','flex');
         editTerms.val(shipment.incoterms);
         editOrigin.val(shipment.origin);
@@ -442,15 +399,47 @@
         editConsigneeCountry.val(shipment.consigneeCountry);
       }
 
-      const openEditOptions = (shipment, editID) =>{
+      const readyCopyForNewShipment = (shipment) =>{
+        shipmentTerms.val(shipment.incoterms);
+        shipmentOrigin.val(shipment.origin);
+        shipmentOriginPort.val(shipment.originPort);
+        shipmentDestination.val(shipment.destination);
+        shipmentDestinationPort.val(shipment.destinationPort);
+
+        shipmentPieceCount.val(shipment.pieceCount);
+        shipmentPieceLength.val(shipment.pieceLength);
+        shipmentPieceWidth.val(shipment.pieceWidth);
+        shipmentPieceHeight.val(shipment.pieceHeight);
+        shipmentGrossWeight.val(shipment.grossWeight);
+
+        shipmentShipperReference.val(shipment.shipperReference);
+        shipmentConsigneeReference.val(shipment.consigneeReference);
+        shipmentProductDescription.val(shipment.productDescription);
+        shipmentProductValue.val(shipment.productDescription);
+
+        shipmentShipper.val(shipment.shipper);
+        shipmentShipperStreet.val(shipment.shipperStreet);
+        shipmentShipperPostCode.val(shipment.shipperPostCode);
+        shipmentShipperCity.val(shipment.shipperCity);
+        shipmentShipperCountry.val(shipment.shipperCountry);
+
+        shipmentConsignee.val(shipment.consignee);
+        shipmentConsigneeStreet.val(shipment.consigneeStreet);
+        shipmentConsigneePostCode.val(shipment.consigneePostCode);
+        shipmentConsigneeCity.val(shipment.consigneeCity);
+        shipmentConsigneeCountry.val(shipment.consigneeCountry);
+      }
+
+      const openEditOptions = (shipment,htmlElement, editID) =>{
         let editBtn = $(`#${editID}`);
         editBtn.click(()=>{
-          console.log(activated);
-          fetch(`/${todo._id}`,{method: "get"}).then((response)=>{
+          editBtn.css('display','none');
+          $('.shipment-update').css('display','inline-block');
+          fetch(`/${shipment._id}`,{method: "get"}).then((response)=>{
             return response.json();
           }).then((data)=>{
             console.log(data);
-            readyEditForm(shipment);
+            readyEditForm(data);
           });
         });
       }
@@ -471,88 +460,48 @@
              consignee : editConsignee.val(),
              consigneeStreet : editConsigneeStreet.val(),
              consigneePostCode : editConsigneePostCode.val(),
-             consigneeCity : shipmentConsigneeCity.val(),
-             consigneeCountry : shipmentConsigneeCountry.val(),
-             incoterms : shipmentTerms.val(),
-             origin : shipmentOrigin.val(),
-             originPort : shipmentOriginPort.val(),
-             destination : shipmentDestination.val(),
-             destinationPort : shipmentDestinationPort.val(),
-             pieceCount : shipmentPieceCount.val(),
-             pieceLength : shipmentPieceLength.val(),
-             pieceWidth : shipmentPieceWidth.val(),
-             pieceHeight : shipmentPieceHeight.val(),
-             grossWeight : shipmentGrossWeight.val(),
+             consigneeCity : editConsigneeCity.val(),
+             consigneeCountry : editConsigneeCountry.val(),
+             incoterms : editTerms.val(),
+             origin : editOrigin.val(),
+             originPort : editOriginPort.val(),
+             destination : editDestination.val(),
+             destinationPort : editDestinationPort.val(),
+             pieceCount : editPieceCount.val(),
+             pieceLength : editPieceLength.val(),
+             pieceWidth : editPieceWidth.val(),
+             pieceHeight : editPieceHeight.val(),
+             grossWeight : editGrossWeight.val(),
              chargeableWeight : 400,
-             shipperReference : shipmentShipperReference.val(),
-             consigneeReference : shipmentConsigneeReference.val(),
-             productDescription : shipmentProductDescription.val(),
-             productValue : shipmentProductValue.val(),
+             shipperReference : editShipperReference.val(),
+             consigneeReference : editConsigneeReference.val(),
+             productDescription : editProductDescription.val(),
+             productValue : editProductValue.val(),
           }),
           }).then((response)=>{
             return response.json();
           }).then((data)=>{
               if(data.ok == 1){
+                updateBtn.css('display','none');
+                $('.shipment-edit').css('display', 'inline-block');
+                editShipmentForm.css('display','none');
               }
           });
         });
       }
-    //     let updateBtn = $(`#${updateID}`);
-    //     updateBtn.click( () => {
-    //         fetch(`/${shipment._id}`,{
-    //         method : "put",
-    //         headers : {
-    //           "Content-Type" : "application/json; charset = utf-8"
-    //         },
-    //         body : JSON.stringify( {shipper : editShipper.val(),
-    //          shipperStreet : shipmentShipperStreet.val(),
-    //          shipperPostCode: shipmentShipperPostCode.val(),
-    //          shipperCity: shipmentShipperCountry.val(),
-    //          shipperCountry: shipmentShipperCountry.val(),
-    //          consignee : shipmentConsignee.val(),
-    //          consigneeStreet : shipmentConsigneeStreet.val(),
-    //          consigneePostCode : shipmentConsigneePostCode.val(),
-    //          consigneeCity : shipmentConsigneeCity.val(),
-    //          consigneeCountry : shipmentConsigneeCountry.val(),
-    //          incoterms : shipmentTerms.val(),
-    //          origin : shipmentOrigin.val(),
-    //          originPort : shipmentOriginPort.val(),
-    //          destination : shipmentDestination.val(),
-    //          destinationPort : shipmentDestinationPort.val(),
-    //          pieceCount : shipmentPieceCount.val(),
-    //          pieceLength : shipmentPieceLength.val(),
-    //          pieceWidth : shipmentPieceWidth.val(),
-    //          pieceHeight : shipmentPieceHeight.val(),
-    //          grossWeight : shipmentGrossWeight.val(),
-    //          chargeableWeight : 400,
-    //          shipperReference : shipmentShipperReference.val(),
-    //          consigneeReference : shipmentConsigneeReference.val(),
-    //          productDescription : shipmentProductDescription.val(),
-    //          productValue : shipmentProductValue.val(),
-    //       }),
-    //       }).then((response)=>{
-    //           return response.json();
-    //       }).then((data)=>{
-    //           if(data.ok == 1){
-    //             let todoIndex = $(`#${todoID}`);
-    //             todoIndex.html(data.value.todo);
-    //             resetShipmentForm();
-    //           }
-    //       });
-    //   });
-    // }
-  /*
-          // editShipmentForm.css('display','flex');
 
+      const copyShipment = (shipment, divShipmentID, copyID) =>{
+        let copyBtn = $(`#${copyID}`);
+        copyBtn.click(()=>{
+          newShipmentForm.css('display','flex');
+          fetch(`/${shipment._id}`, {method: "get"}).then((response)=>{
+            return response.json();
+          }).then((data)=>{
+             readyCopyForNewShipment(data);
+          });
+        });
+      }
 
-}
-
-
-
-
-
-
-*/
       const deleteShipment = (shipment, divShipmentID, deleteID) =>{
         let deleteBtn = $(`#${deleteID}`);
         deleteBtn.click(()=>{
@@ -572,6 +521,7 @@
         return {
           editID : "edit_" + shipment._id,
           updateID : "update_" + shipment._id,
+          copyID : "copy_" + shipment._id,
           deleteID : "delete_" + shipment._id,
           divShipmentID : "divShipment_" + shipment._id,
           shipmentID : 'shipment_' + shipment._id,
@@ -589,13 +539,6 @@
 
       const buildTemplate = (shipment,ids) =>{
         return `<div class = shipment id = "${ids.divShipmentID}">
-          <div class = shipment-edit-container >
-            <button class = shipment-edit id = '${ids.editID}' type = button>Edit</button>
-            <button class = shipment-update id = "${ids.updateID}" type = button>Update</button>
-          </div>
-          <div class = shipment-delete-container>
-            <button type = button class = shipment-delete id = '${ids.deleteID}'>Delete</button>
-          </div>
           <div class = shipper-container>
             <p class = shipper id= "${ids.shipperID}">${shipment.shipper}</p>
           </div>
@@ -623,6 +566,12 @@
           <div class = product-description-container>
             <p class = product-description id = "${ids.productDescriptionID}">${shipment.productDescription}</p>
           </div>
+          <div class = shipment-actions-container >
+            <button type = button class = shipment-edit id = '${ids.editID}'></button>
+            <button class = shipment-update id = "${ids.updateID}" type = button></button>
+            <button type = button class = shipment-copy id = '${ids.copyID}'></button>
+            <button type = button class = shipment-delete id = '${ids.deleteID}'></button>
+          </div>
         </div>`
       }
 
@@ -630,7 +579,9 @@
         data.forEach((shipment) =>{
           let ids = buildIDS(shipment);
           shipments.append(buildTemplate(shipment,ids));
-          // editShipment(shipment,ids.shipmentID,ids.editID);
+          openEditOptions(shipment,ids.shipmentID,ids.editID);
+          updateShipment(shipment,ids.shipmentID,ids.updateID);
+          copyShipment(shipment, ids.shipmentID, ids.copyID);
           deleteShipment(shipment,ids.shipmentID,ids.deleteID);
         });
       }
@@ -674,8 +625,9 @@
           if(data.result.ok == 1 && data.result.n == 1){
             let ids = buildIDS(data.document);
             shipments.append(buildTemplate(data.document,ids));
-            // editShipment(data.document,ids.shipmentID,ids.editID);
-            // deleteShipment(data.document,ids.shipmentID,ids.deleteID);
+            openEditOptions(data.document,ids.divShipmentID,ids.editID);
+            updateShipment(data.document, ids.divShipmentID,ids.updateID);
+            deleteShipment(data.document,ids.divShipmentID,ids.deleteID);
           }
           resetShipmentForm();
           newShipmentForm.css('display','none');
@@ -689,23 +641,5 @@
 </script>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>

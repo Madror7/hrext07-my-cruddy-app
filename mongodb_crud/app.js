@@ -26,12 +26,12 @@ app.get('/getTodos',(req, res)=>{
 
 app.get('/:id', (req,res)=>{
   const todoID = req.params.id;
-  db.getDB().collection(collection).findOne({_id: db.getPrimaryKey(todoID)}, (err,documents)=>{
+  db.getDB().collection(collection).findOne({_id: db.getPrimaryKey(todoID)}, (err,document)=>{
     if(err)
       console.log(err);
     else{
-      console.log(documents);
-      res.json(documents);
+      console.log(document);
+      res.json(document);
     }
   });
 });
@@ -41,7 +41,7 @@ app.put('/:id',(req,res) =>{
   const todoID = req.params.id;
   const userInput = req.body;
 
-  db.getDB().collection(collection).findOneAndUpdate({_id: db.getPrimaryKey(todoID)}, {$set: {todo: userInput.todo}}, {returnOriginal : false},(err,result)=>{
+  db.getDB().collection(collection).findOneAndUpdate({_id: db.getPrimaryKey(todoID)}, {$set: {shipper: userInput.shipper, consignee: userInput.consignee}}, {returnOriginal : false},(err,result)=>{
     if(err)
         console.log(err);
     else{

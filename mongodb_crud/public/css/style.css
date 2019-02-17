@@ -135,36 +135,31 @@ input.new-shipment-shipping-port-code, input.new-shipment-delivery-port-code, in
 }
 
 button.make-new-shipment {
-    width: 200px;
-    height: 28px;
+    width: auto;
+    height: auto;
     margin-right: 2%;
-    background-color: white;
-    color: dodgerblue;
-    font-size: 18px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px dodgerblue;
-    border: 1px solid dodgerblue;
+    background: transparent;
+    border: none;
+}
+
+.make-new-shipment-image, .home-button-image{
+    height: 40px;
+    width: auto;
 }
 
 .home-button {
     margin-left: 2%;
-    width: 100px;
-    height: 28px;
-    background-color: white;
-    color: dodgerblue;
-    border: 1px solid dodgerblue;
-    box-shadow: 0px 2px 8px dodgerblue;
-    border-radius: 10px;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: transparent;
+    border: none;
 }
 
-.home-button p{
-    margin: 0;
-    font-size: 18px;
-}
+
 .shipment-view {
     display: flex;
     flex-flow: column;
@@ -172,10 +167,15 @@ button.make-new-shipment {
     height: 93.5vh;
 }
 
-.view-header, .shipment{
+.view-header, .shipments, .shipment{
     width: 100%;
     display: flex;
     justify-content: right;
+}
+
+.view-header{
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
 .view-header > div{
@@ -188,7 +188,7 @@ button.make-new-shipment {
   height: 40px;
 }
 .shipments{
-  width: 100%;
+  flex-wrap: wrap;
   overflow-y: scroll;
 }
 .shipment {
@@ -196,15 +196,44 @@ button.make-new-shipment {
     width: 100%;
 }
 
+.shipment-edit, .shipment-update,.shipment-delete, .shipment-copy{
+  border: none;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  margin: auto;
+}
+
+.shipment-edit{
+  background-image: url('https://imgur.com/4sCjh4s.png');
+}
+
+
+.shipment-update{
+  background-image: url('https://imgur.com/jk2ZdAt.png');
+}
+
+.shipment-copy{
+  background-image: url('https://imgur.com/MrePpqw.png');
+}
+.shipment-copy:hover{
+  background-image: url('https://imgur.com/KD2wBKM.png');
+}
+.shipment-delete{
+  background-image: url('https://imgur.com/5nAkudr.png');
+}
 
 .header-shipper-container, .header-consignee-container,.header-product-description-container, .shipper-container, .consignee-container,.product-description-container {
     width: 13%;
 }
-.header-shipment-edit-container, .header-shipment-delete-container, .shipment-edit-container, .shipment-delete-container{
-  width: 8%
+.header-shipment-actions-container, .shipment-actions-container {
+  width: 14%;
+  display: flex;
+  justify-content: space-between;
 }
+
 .header-shipper-reference-container,.header-consignee-reference-container,.header-origin-container,.header-destination-container, .header-gross-weight-container, .header-chargeable-weight-container, .shipper-reference-container,.consignee-reference-container,.origin-container,.destination-container, .gross-weight-container, .chargeable-weight-container{
-    width: 7%;
+    width: 8%;
 }
 
 .shipment-details-container{
